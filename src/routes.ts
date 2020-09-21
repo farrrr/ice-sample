@@ -35,10 +35,11 @@ import FeedbackNotFound from '@/pages/FeedbackNotFound';
 import FeedbackServerError from '@/pages/FeedbackServerError';
 import Settings from '@/pages/Settings';
 import Person from '@/pages/Person';
+import withAuth from '@/components/Auth';
 
 const routerConfig = [
   {
-    path: '/user',
+    path: '/auth',
     component: UserLayout,
     children: [
       {
@@ -51,7 +52,7 @@ const routerConfig = [
       },
       {
         path: '/',
-        redirect: '/user/login',
+        redirect: '/auth/login',
       },
     ],
   },
@@ -62,134 +63,167 @@ const routerConfig = [
       {
         path: '/solution',
         component: Solution,
+        wrappers: [withAuth],
       },
       {
         path: '/dashboard/analysis',
         component: Analysis,
+        wrappers: [withAuth],
       },
       {
         path: '/dashboard/monitor',
         component: Monitor,
+        wrappers: [withAuth],
       },
       {
         path: '/dashboard/workplace',
         component: Workplace,
+        wrappers: [withAuth],
       },
       {
         path: '/form/basic',
         component: FormBasic,
+        wrappers: [withAuth],
       },
       {
         path: '/form/two',
         component: FormTwo,
+        wrappers: [withAuth],
       },
       {
         path: '/form/three',
         component: FormThree,
+        wrappers: [withAuth],
       },
       {
         path: '/form/four',
         component: FormFour,
+        wrappers: [withAuth],
       },
       {
         path: '/form/step',
         component: FormStep,
+        wrappers: [withAuth],
       },
       {
         path: '/form/classified',
         component: FormClassified,
+        wrappers: [withAuth],
       },
       {
         path: '/form/hierarchical',
         component: FormHierarchical,
+        wrappers: [withAuth],
       },
       {
         path: '/form/group',
         component: FormGroup,
+        wrappers: [withAuth],
       },
       {
         path: '/form/flow',
         component: FlowGroup,
+        wrappers: [withAuth],
       },
       {
         path: '/detail/basic',
         component: BasicDetailPage,
+        wrappers: [withAuth],
       },
       {
         path: '/detail/advanced',
         component: Advanced,
+        wrappers: [withAuth],
       },
       {
         path: '/list/basic',
         component: BasicListPage,
+        wrappers: [withAuth],
       },
       {
         path: '/list/card',
         component: CardListPage,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/filter',
         component: FusionFilterTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/mutilcol',
         component: FusionMutilcolTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/singlecol',
         component: FusionSinglecolTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/expand',
         component: FusionExpandTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/action',
         component: FusionActionTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/mergecell',
         component: FusionMergecellTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/singletree',
         component: FusionSingletreeTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table/dialog',
         component: FusionDialogTable,
+        wrappers: [withAuth],
       },
       {
         path: '/list/table',
         component: TableListPage,
+        wrappers: [withAuth],
       },
       {
         path: '/feedback/fail',
         component: FeedbackFail,
+        wrappers: [withAuth],
       },
       {
         path: '/feedback/success',
         component: FeedbackSuccess,
+        wrappers: [withAuth],
       },
       {
         path: '/feedback/403',
         component: FeedbackForbidden,
+        wrappers: [withAuth],
       },
       {
         path: '/feedback/404',
         component: FeedbackNotFound,
+        wrappers: [withAuth],
       },
       {
         path: '/feedback/500',
         component: FeedbackServerError,
+        wrappers: [withAuth],
       },
       {
         path: '/settings',
         component: Settings,
+        wrappers: [withAuth],
       },
       {
         path: '/person',
         component: Person,
+        wrappers: [withAuth],
       },
       {
         path: '/',

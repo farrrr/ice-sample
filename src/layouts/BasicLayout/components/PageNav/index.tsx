@@ -4,8 +4,7 @@ import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
-const SubNav = Nav.SubNav;
-const NavItem = Nav.Item;
+const { SubNav, Item: NavItem } = Nav;
 
 export interface IMenuItem {
   name: string;
@@ -20,22 +19,18 @@ function getNavMenuItems(menusData: any[], initIndex?: number | string) {
   }
 
   return menusData
-    .filter(item => item.name && !item.hideInMenu)
+    .filter((item) => item.name && !item.hideInMenu)
     .map((item, index) => {
       return getSubMenuOrItem(item, `${initIndex}-${index}`);
     });
 }
 
 function getSubMenuOrItem(item: IMenuItem, index?: number | string) {
-  if (item.children && item.children.some(child => child.name)) {
+  if (item.children && item.children.some((child) => child.name)) {
     const childrenItems = getNavMenuItems(item.children, index);
     if (childrenItems && childrenItems.length > 0) {
       const subNav = (
-        <SubNav
-          key={index}
-          icon={item.icon}
-          label={item.name}
-        >
+        <SubNav key={index} icon={item.icon} label={item.name}>
           {childrenItems}
         </SubNav>
       );
@@ -46,9 +41,7 @@ function getSubMenuOrItem(item: IMenuItem, index?: number | string) {
   }
   const navItem = (
     <NavItem key={item.path} icon={item.icon}>
-      <Link to={item.path}>
-        {item.name}
-      </Link>
+      <Link to={item.path}>{item.name}</Link>
     </NavItem>
   );
 

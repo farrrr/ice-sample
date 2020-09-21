@@ -2,114 +2,114 @@ const headerMenuConfig = [];
 
 const asideMenuConfig = [
   {
-    name: '数据页面',
+    name: '數據頁麵',
     path: '/',
     icon: 'chart-pie',
     children: [
       {
-        name: '分析页面',
+        name: '分析頁麵',
         path: '/dashboard/analysis',
       },
       {
-        name: '监控页面',
+        name: '監控頁麵',
         path: '/dashboard/monitor',
       },
       {
-        name: '工作台',
+        name: '工作臺',
         path: '/dashboard/workplace',
       },
     ],
   },
   {
-    name: '表单页面',
+    name: '錶單頁麵',
     path: '/',
     icon: 'copy',
     children: [
       {
-        name: '单列表单',
+        name: '單列錶單',
         path: '/form/basic',
       },
       {
-        name: '两列表单',
+        name: '兩列錶單',
         path: '/form/two',
       },
       {
-        name: '三列表单',
+        name: '三列錶單',
         path: '/form/three',
       },
       {
-        name: '四列表单',
+        name: '四列錶單',
         path: '/form/four',
       },
       {
-        name: '分步表单',
+        name: '分步錶單',
         path: '/form/step',
       },
       {
-        name: '分类表单',
+        name: '分類錶單',
         path: '/form/classified',
       },
       {
-        name: '分组表单',
+        name: '分組錶單',
         path: '/form/group',
       },
       {
-        name: '流程表单',
+        name: '流程錶單',
         path: '/form/flow',
       },
       {
-        name: '分级表单',
+        name: '分級錶單',
         path: '/form/hierarchical',
       },
     ],
   },
   {
-    name: '列表页面',
+    name: '列錶頁麵',
     path: '/',
     icon: 'chart-bar',
     children: [
       {
-        name: '基础列表',
+        name: '基礎列錶',
         path: '/list/basic',
       },
       {
-        name: '卡片列表',
+        name: '卡片列錶',
         path: '/list/card',
       },
       {
-        name: '表格列表',
+        name: '錶格列錶',
         path: '/',
         children: [
           {
-            name: '基础过滤',
+            name: '基礎過濾',
             path: '/list/table/filter',
           },
           {
-            name: '单列过滤',
+            name: '單列過濾',
             path: '/list/table/singlecol',
           },
           {
-            name: '多列过滤',
+            name: '多列過濾',
             path: '/list/table/mutilcol',
           },
           {
-            name: '带操作列',
+            name: '帶操作列',
             path: '/list/table/action',
           },
           {
-            name: '可展开表',
+            name: '可展開錶',
             path: '/list/table/expand',
           },
           {
-            name: '单层树表',
+            name: '單層樹錶',
             path: '/list/table/singletree',
           },
           {
-            name: '弹窗表格',
+            name: '彈窗錶格',
             path: '/list/table/dialog',
           },
           {
-            name: '合并单元格',
+            name: '合並單元格',
             path: '/list/table/mergecell',
           },
         ],
@@ -117,31 +117,31 @@ const asideMenuConfig = [
     ],
   },
   {
-    name: '详情页面',
+    name: '詳情頁麵',
     path: '/',
     icon: 'calendar',
     children: [
       {
-        name: '基础详情',
+        name: '基礎詳情',
         path: '/detail/basic',
       },
       {
-        name: '高级详情',
+        name: '高級詳情',
         path: '/detail/advanced',
       },
     ],
   },
   {
-    name: '结果&缺省',
+    name: '結果&缺省',
     path: '/',
     icon: 'warning',
     children: [
       {
-        name: '成功页面',
+        name: '成功頁麵',
         path: '/feedback/success',
       },
       {
-        name: '失败页面',
+        name: '失敗頁麵',
         path: '/feedback/fail',
       },
       {
@@ -159,32 +159,32 @@ const asideMenuConfig = [
     ],
   },
   {
-    name: '设置页面',
+    name: '設定頁麵',
     path: '/',
     icon: 'set',
     children: [
       {
-        name: '系统设置',
+        name: '係統設定',
         path: '/settings',
       },
       {
-        name: '个人设置',
+        name: '個人設定',
         path: '/person',
       },
     ],
   },
   {
-    name: '登录&注册',
+    name: '登入&註冊',
     path: '/',
     icon: 'account',
     children: [
       {
-        name: '登录',
-        path: '/user/login',
+        name: '登入',
+        path: '/auth/login',
       },
       {
-        name: '注册',
-        path: '/user/register',
+        name: '註冊',
+        path: '/auth/register',
       },
     ],
   },
